@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>-->
 <!--ceci  n'est pas une balise mais un directive
 Indique la version de HTML utilisé: HTML5
 -->
