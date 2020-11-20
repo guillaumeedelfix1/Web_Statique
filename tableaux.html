@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+<!--Balise paires/ Impaires-->
+
+<html>
+<head><!--en tête de la pâge-->
+	<lang="fr"/>
+	<meta charset="utf-8"><!--encodage de la page (gestion des caractères accentués)-->
+	<title>Les Tableaux</title><!--en tête de la page-->
+	<!--intégrer un fichier CSS externe-->
+	<link rel="stylesheet" type="text/css" href="..css/monstyle.css">
+	<!--Afficher une image dans l'onglet de sa page-->
+	<link rel="icon" type="image/x-icon" href="../images/caramini.jpg" />
+
+
+
+</head>
+<body><!--corp de la page: contient les éléments affichés-->
+	<header>Mon modele</header>
+
+<h1>Les tableaux</h1>
+	<p>Pour afficher un tableau nous auront besoins des balises "table" "tr" "td"</p>
+		<ul><dl>Balise "table" "tr" "td" <br><br>
+             	<li><dt>Balise table</dt>
+                        <dd>permet de représenter un tableau de données, c'est-à-dire des informations exprimées sur un tableau en deux dimensions.</dd></li>                    
+                <li><dt>Balise tr</dt>
+                        <dd>éfinit une ligne de cellules dans un tableau. Une ligne peut être constituée d'éléments "td" (les données des cellules) et "th" (les cellules d'en-têtes).</dd></li>
+               	<li><dt>Balise td</dt>
+                        <dd>éfinit une cellule d'un tableau qui contient des données. Cet élément fait partie du modèle de tableau.</dd></li>
+       	</dl></ul>
+	<h2>Tableau sans bordures</h2>
+    <table>
+
+        <tr>
+            <td>Cellule l1c1</td>
+            <td>Cellule l2c2</td>
+        </tr>
+        <tr>
+            <td>Cellule l1c1</td>
+            <td>Cellule l2c2</td>
+        </tr>
+    </table>
+
+    <h2>Tableau avec bordures</h2>
+    <table rules="all">
+
+        <tr>
+            <td>Cellule L1c1</td>
+            <td>Cellule L1c2</td>
+            <td>Cellule L1c3</td>
+        </tr>
+        <tr>
+            <td>Cellule L2c1</td>
+            <td>Cellule L2c2</td>
+        </tr>
+        <tr>
+        	<td>Cellule L3C1</td>
+        </tr>
+        <tr>
+       
+        </tr>
+    </table>
+
+
+    <h2>Tableau avec bordures</h2>
+    <table rules="all" style="border:solid 1px black;">
+
+        <tr>
+            <td>Cellule L1c1</td>
+            <td>Cellule L1c2</td>
+            <td>Cellule L1c3</td>
+        </tr>
+        <tr>
+            <td>Cellule L2c1</td>
+            <td>Cellule L2c2</td>
+        </tr>
+        <tr>
+        	<td>Cellule L3C1</td>
+        </tr>
+        <tr>
+       
+        </tr>
+    </table>
+
+<h2>Tableau avec entête</h2>
+    <table rules="all" style="border:solid 1px black;">
+    	<!--entête tableau-->
+    	<tr>
+    		<th>Colonne 1</th><th>Colonne 2</th><th>Colonne 3</th>
+    	</tr>
+        <tr>
+            <td>Cellule L1c1</td>
+            <td>Cellule L1c2</td>
+            <td>Cellule L1c3</td>
+        </tr>
+        <tr>
+            <td>Cellule L2c1</td>
+            <td>Cellule L2c2</td>
+            <td>Cellule L2c3</td>
+        </tr>
+        <tr>
+        	<td>Cellule L3C1</td>
+        	<td>Cellule L3C2</td>
+        	<td>Cellule L3C3</td>
+        </tr>
+        <tr>
+       
+        </tr>
+    </table>
+
+<h2>Tableau Strucuré</h2>
+    <table rules="all" style="border:solid 1px black;">
+    	<!--entête tableau-->
+    	<thead>
+    		<tr>
+    			<td>Colonne 1</td><td>Colonne 2</td><td>Colonne 3</td>
+    		</tr>
+    	</thead>
+        	
+
+    	<tbody><!--corp du tableau-->
+        	<tr>
+
+            	<td>Cellule L1c1</td>
+            	<td>Cellule L1c2</td>
+            	<td>Cellule L1c3</td>
+        	</tr>
+        	<tr>
+            	<td>Cellule L2c1</td>
+            	<td>Cellule L2c2</td>
+            	<td>Cellule L2c3</td>
+        	</tr>
+        	<tr>
+        		<td>Cellule L3C1</td>
+        		<td>Cellule L3C2</td>
+        		<td>Cellule L3C3</td>
+        	</tr>
+ 			</tbody>
+ 			<!--pied tableau-->
+ 			<tfoot>
+ 				<tr>
+ 					<td></td><td></td><td></td>
+ 			</tfoot>
+		</table> 
+
+	<h2>Tableau avec cellpadding</h2>
+	<!--le cellpadding sert a modifier l'écart avec la marge intérieur-->
+	<!-- une taille peut se gerer en px,em ou encore en pourcentage-->
+	<table rules="all" cellpadding="5px" style="border:groove 3px purple; width:600px; font-family:algerian; font-size:12px; color: pink;">
+		<tr style="color:steelblue">
+			<th>Titre 1</th><th>Titre 2</th><th>Titre 3</th>
+		</tr>
+		<tr>
+			<td>Cellule A1</td><td>Cellule A2</td><td>Cellule A3</td>
+		</tr>
+		<tr>
+			<td>Cellule B1</td><td>Cellule 2</td><td style="background-color:yellow" >Cellule B3</td>
+		</tr>
+	</table>
+
+	<h2>Tableau irrégulier fait avec la mauvaise façon en jouant sur les bordures</h2>
+		<table rules="all" cellpadding="5px" style="width:500px; border:solid 1px black;font-family:verdana;font-size:12px;">
+			<tr style="color:steelblue">	
+				<th width="50%">Titre 1</th>
+				<th width="25%">Titre 2</th>
+				<th width="25%">Titre 3</th>
+			</tr>
+			<tr>
+				<td style="border-bottom: none; ">cell1,1</td>
+				<td style="border-right: : none; ">cell1,2</td>
+				<td style="border-left: : none; ">cell1,3</td>
+			</tr>
+			<tr>
+				<td style="border-top: : none; "></td>
+				<td>cell2,2</td>
+				<td>cell2,3</td>
+			</tr>
+		</table>
+		<!--Pourquoi est-il irrégulier?
+			c'est quoi ces td vide ?(=>génère l'irrégularité)
+			Dans cet exemple, nous voyons les propriétés spécifique de la bordure 'border est une superptopiété)
+			On peut ainsi gérer chaque partie d'une bordure; vous pouvez voir otutes les valeurs possibles en complétant-->
+
+	<h2>Tableau irrégulier fait avec la bonne façon en jouant sur les bordures</h2>
+		<table rules="all" cellpadding="5px" style="width:500px; border:solid 1px black;font-family:verdana;font-size:12px;">
+			<tr style="color:steelblue">	
+				<th>Titre 1</th>
+				<th>Titre 2</th>
+				<th>Titre 3</th>
+			</tr>
+			<tr>
+				<td rowspan="2">cellule A1 (prend la place de A2)</td><!--sert a fusionner un des lignes-->
+				<td colspan="2">Cellule A3 (prend la place de B3)</td><!--sert a fusionner des colones-->
+				
+			</tr>
+			<tr>
+				<td>Cellule B1</td>
+				<td>Cellule B2</td>
+				
+			</tr>
+		</table>
+
+		
+	<h2>Tableau</h2>
+		<table rules="all" cellpadding="5px" style="width:500px; border:solid 1px black;font-family:verdana;font-size:12px;">
+			<caption style="margin:5px	font-size:14px;  caption-side: bottom;">Légende du tableau</caption><!--représente la légende (ou le titre) d'un tableau-->
+			<caption style="margin:5px	font-size:14px; caption-side: top;">Titre du tableau</caption>
+			<thead>
+				<tr style="color:steelblue">	
+					<th>Titre 1</th>
+					<th>Titre 2</th>
+					<th>Titre 3</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan="3">
+					Pied de page du tableau
+					Déclaré avant la balise tbody pour que le navigateur puisse l'afficher
+					sans avoir toutes les informations inclues dans tbody 
+					</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td rowspan="2">Cellule A1 (prend la place de A2)</td>
+					<td colspan="2">Cellule A3 (prend la place de B3)</td>
+				</tr>
+				<tr>
+					<td>Cellule B1</td>
+					<td>Cellule B2</td>
+				</tr>
+				<tr>
+					<td>Cellule C1</td>
+					<td>Cellule C2</td>
+					<td>Cellule C3</td>
+				</tr>
+			</tbody>
+		</table>	
+<!--border-collapse:separate sert a ne plus avoir de bordure commune ebtre le cellule-->
+<!--tyle="border-spacing: 5px; sert a définir l'espace entre les bordure-->
+
+
+
+
+
+ 		
+
+
+    
+      
+    
+
+
+</body>
+</html>
+       		
+       
+
+
+
+
+
+
+
+
+
+</body>
+</html>
