@@ -15,7 +15,7 @@ Indique la version de HTML utilisé: HTML5
 <body>
 <!--corp de la page: contient les éléments affichés-->
 <p>page d'accueil</p>
-<a href="https://github.com/guillaumeedelfix1/Web_Statique/blob/gh-pages/page1.md" target="_blank">accéder a la page 1 test 1</a><br>
+<a href="page1.html" target="_blank">accéder a la page 1 test 1</a><br>
 <a href="page1.html" target="_self">accéder a la page 1</a><br>
 <a href="https://google.com">lien vers google</a>
 <a href="./page1.html#Poeme3">Accéder au poème 3 de la page 1</a>
