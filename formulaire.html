@@ -15,6 +15,26 @@ Indique la version de HTML utilisé: HTML5
 	<link rel="stylesheet" type="text/css" href="..css/monstyle.css">
 	<!--Afficher une image dans l'onglet de sa page-->
 	<link rel="icon" type="image/x-icon" href="images/caramini.jpg" />
+	<style type="text/css">
+		input[type="range"] {
+			position: relative;
+			margin-left: 1em
+		}
+		input[type="range"]:after
+		input[type="range"]:before{
+			position: absolute;
+			top:1em;
+			color: #aaa
+		}
+		input[type="range"]:before{
+			left:0em;
+			content: attr(min);
+		}
+		input[type="range"]:after {
+			right:0em;
+			content: attr(max);
+		}
+	</style>	
 </head>
 <body><!--corp de la page: contient les éléments affichés-->
 <hr>
@@ -43,11 +63,11 @@ Indique la version de HTML utilisé: HTML5
 			<input type="radio" name="radio" id="radio" value="F"><br>
 			
 			<label for="nom">Nom:</label>
-			<input type="text" name="nom" id="nom" placeholder="Saisir nom" value="" maxlength="10" size="20"><br>
+			<input type="text" name="nom" id="nom" placeholder="Saisir nom" value="" maxlength="10" size="20" required=""><br>
 			<!--maxlength="10" size="20" pour modifier le nbr de caractère max et la taille du champ-->
 			
 			<label for="nom">Prénom:</label>
-			<input type="text" name="prenom" id="prenom" placeholder="Saisir prénom" ><br>
+			<input type="text" name="prenom" id="prenom" placeholder="Saisir prénom" required=""><br>
 			
 			<label for="email">Email:</label>
 			<input type="email" name="email" id="email" placeholder="Saisir email" required=""><br><!--required rend obligatoire un champ-->
@@ -104,9 +124,17 @@ Indique la version de HTML utilisé: HTML5
 				<br><label for="Jeux">NbJeux</label>
 				<input type="number" name="Jeux" step="5" max="25" min="0"><!--disabled="" permet de rendre inactif-->
 				<br><label for="niv" >Niveau langue</label>
-				<input type="range" name="niv" value="2" min="0" max="10" step="2" >
+				<input type="range" name="niv" min="0" max="10" step="2" value="2" oninput="this.nextElementSibling.value = this.value" >
+				<output>      </output>
 		</fieldset>
-
+		<fieldset>
+				<br><label for="avance">Progress barre:</label>
+				<!--<meter id="progress" min="0" max="100" value>-->
+				<!--<br><progress id="progress" max="100">5%</progress>-->
+				<!--progression : <progress value="0.5"/>
+					progression : <progress/>1<BR>-->				
+				<meter id="Progress" name="avance"  value="0" max="5"/>
+			</fieldset>
 		<fieldset>	
 			<!--<input type="bouton" name="test" value="test" onclick="f();">-->
 			<br><input type="bouton" name="test" value="test" onclick="alert('click ! ');"><!--permet de crée un champ sur le haut de la page onclick permet de dire ce que vas faire le boutton quand on clique dessu-->
