@@ -9,7 +9,7 @@ Indique la version de HTML utilisé: HTML5
 
 <html>
 <head><!--en tête de la pâge-->
-	<title>Image cliquable</title><!--en tête de la page-->
+	<title>Modele</title><!--en tête de la page-->
 	<meta charset="utf-8"><!--encodage de la page (gestion des caractères accentués)-->
 	<!--intégrer un fichier CSS externe-->
 	<link rel="stylesheet" type="text/css" href="..css/monstyle.css">
@@ -17,38 +17,29 @@ Indique la version de HTML utilisé: HTML5
 	<link rel="icon" type="image/x-icon" href="images/caramini.jpg" />
 </head>
 <body><!--corp de la page: contient les éléments affichés-->
+<hr>
 	<hr color="">
 	<header id="haut"><img src="images/logomini.png"><h1>GDESIGN</h1></header>
 	<hr color="">
-	<h2>Utilisation de la balise aréa pour crée une image cliquable</h2>
-	<p><strong>Consigne:</strong> Utiliser une image repésentant les 4 saison et faire que si l'on clique sur une des saisons on nous montre un calendrier des fruit et légume de saisons </p>
+<hr>
+<!--permet de decouper une image pour dire que telle zone de l'image fais telle chose-->
 
-<!--permet de decouper une image pour dire que telle zone de l'image fais telle chose-->
-	<img src="images/4saison.png" width="600" height="600" alt="plan" usemap="#logo"/>
-	<map name="logo">
-	<area shape="rect" coords="0,0,300,300" href="images/fruit_et_legume_automne.png" alt="automne" target="blank">
-	<area shape="rect" coords="300,300,600,0" href="images/été_fruit_légume.png" alt="été" target="blank">
-	<area shape="rect" coords="300,300,600,600" href="images/fruit_et_légume_hiver.png" alt="hiver" target="blank">
-	<area shape="rect" coords="0,600,300,300" href="images/fruit_et_legume_printmeps.png" alt="pintemps" target="blank">
-	<!-- triangle est un shape de type poly-->	
-<hr>
-<br><a href="./index.html">lien vers l'accueil</a><br>
-<hr>
-<!--permet de decouper une image pour dire que telle zone de l'image fais telle chose-->
-<!-- triangle est un shape de type poly-->
-<h1>Consignes:</h1><br>
-	<img src="images/cons.jpg" width="600"><br>  
-	<img src="images/image_exo.jpg" alt="Plan"  usemap="#formes" width="700" />
+
+
+
+<img src="images/image_exo.jpg" alt="Plan"  usemap="#formes" width="700" />
 	<map name="formes">
 	    <area shape="circle" coords="134,134,110"  href="https://www.google.fr/" alt="google">
 	    <area shape="rect" coords="687,238,438,35"  href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal" alt="Wiki">
 	    <area shape="rect" coords="?,?,?,?" href="" alt="triangle">
 	</map>
-<hr>
-<br><a href="./index.html">lien vers l'accueil</a><br>
+	
+
+
+
+
 <hr>
 <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
 <hr>
-
 </body>
 </html>
