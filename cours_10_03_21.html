@@ -509,6 +509,7 @@ Indique la version de HTML utilisé: HTML5
         ctx.fillStyle = grd;
         ctx.fillRect(0, 0, 300, 200);
     </script>
+    
     <hr style="color: black;border: solid">
     <h2>Gradient circulaire</h2>
     <canvas id="Canvas10" width="300" height="200" style="border: solid 1px black;"></canvas>
@@ -522,9 +523,37 @@ Indique la version de HTML utilisé: HTML5
         ctx.fillStyle = gradient;
         ctx.fillRect(0, 0, 300, 200);
     </script>
+    
+    <h2>canvas avec une image charger dynamiquement</h2>
+        <canvas id="canvasimage" width="300" height="200" style="border: solid 1px black;"></canvas>
+        <script type="text/javascript">
+            window.onload = function() 
+            //function draw()
+            {
+                var canvasimage = document.getElementById("canvasimage");
+                var ctx = canvasimage.getContext("2d");
+                //je crée l'objet de type image
+                var objImg = new Image();
+                objImg.src="images/graphique.png";
+                objImg.width=canvasimage.width/2;
+                objImg.height=canvasimage.height/2;
+                ctx.drawImage(objImg,(canvasimage.width-objImg.width)/2, (canvasimage.height-objImg.height)/2,objImg.width, objImg.height);
+                objImg.onload = function()
+                {
 
-
-
+                    ctx.drawImage(objImg,0,0);
+                    ctx.moveTo(30,96);
+                    ctx.lineTo(70,66);
+                    ctx.lineTo(103,76);
+                    ctx.lineTo(170,15);
+                    ctx.stroke();
+                    ctx.fillText("dessiner un graphique",70,170);
+                    
+                };
+                
+            }
+        </script>
+ 
     <hr>
     <a href="./index.html">lien vers l'accueil</a>
     <hr>
