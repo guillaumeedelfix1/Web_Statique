@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>Modele</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <link rel="stylesheet" type="text/css">
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="images/caramini.png" />
+    <style type="text/css">
+        .box1 {
+            width: 600px;
+            height: 400px;
+            border: solid 1px black;
+            display: flex;
+            flex-wrap: wrap
+        }
+
+        .boxrouge {
+            width: 300px;
+            height: 200px;
+            background-color: red
+        }
+
+        .boxblanc {
+            width: 300px;
+            height: 200px;
+            background-color: white
+        }
+
+        .boxvert {
+            width: 300px;
+            height: 200px;
+            background-color: rgba(0, 255, 0, 1);
+        }
+
+        .box2 {
+            width: 600px;
+            height: 400px;
+            border: solid 1px black;
+        }
+
+        .boxrouge2 {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            background-color: red;
+        }
+
+        .boxblanc2 {
+            width: 300px;
+            height: 200px;
+            background-color: white
+        }
+
+        .boxvert2 {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            background-color: rgba(0, 255, 0, 1);
+            margin-left: 300px
+        }
+
+        .box3 {
+            width: 600px;
+            height: 400px;
+            border: solid 1px black;
+            display: inline;
+        }
+
+        .boxrouge3 {
+            width: 300px;
+            height: 200px;
+            background-color: red
+        }
+
+        .boxvert3 {
+            width: 300px;
+            height: 200px;
+            background-color: rgba(0, 255, 0, 1);
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <!--corp de la page: contient les éléments affichés-->
+
+    <hr color="">
+    <header id="haut"><img src="images/logomini.png"></header>
+    <hr color="">
+    <br>
+    <h2>Méthode de dessin avec des div</h2>
+    <div class=box1>
+        <div class=boxrouge></div>
+        <div class=boxblanc></div>
+        <div class=boxblanc></div>
+        <div class=boxvert></div>
+    </div>
+    <hr style="color: black;border: solid">
+    <h2>Méthode de dessin avec des div et le display flex </h2>
+    <div class=box2>
+        <div class=boxrouge2></div>
+        <div class=boxvert2></div>
+    </div>
+
+    <!--<div class=box3>
+        <span class=boxrouge3></span>
+        <span class=boxvert3>
+    </div>-->
+    <hr style="color: black;border: solid">
+    <h2>Canvas 1 dessin simple</h2>
+    <canvas id="Canvas1" width="300" height="200" style="border:1px solid #000000;display: block;"></canvas>
+    <script>
+        Canvas1.getAttribute("name");
+        console.log('test'); //afficher le mot test dans la console 
+        console.log(document.location);
+        console.log('#location.href', document.location.href);
+        console.log('#location.search', document.location.search);
+        console.log(Canvas1.id); //afficher l'id de canvas1)
+        console.log(Canvas1.name); //afficher le nom de canvas1)
+        console.log(Canvas1.width); //afficher la largeur de canvas1 dans la console)
+        console.log(Canvas1.height); //afficher la longueur de canvas1 dans la console)
+        var hauteur = Canvas1.height; //stocker la height dans une variable 
+        var largeur = Canvas1.width; //stocker la width dans une variable
+        //Récupérer l'objet canvas par son ID
+        var canvas = document.getElementById("Canvas1");
+        //Créer un objet de dessin sur le canvas
+        var ctx = canvas.getContext("2d");
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "#FF0000";
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(0, 0, largeur / 2, hauteur / 2);
+
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "#00FF00";
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur / 2, hauteur / 2, largeur / 2, hauteur / 2);
+    </script>
+
+    <hr style="color: black;border: solid">
+    <h2>Canvas2 qui est le canvas 1 divisé par deux </h2>
+    <canvas id="CanvasEx" style="border:1px solid #000000;display: block;"></canvas>
+    <script>
+        CanvasEx.width = largeur / 2;
+        CanvasEx.height = hauteur / 2;
+        console.log('test');
+        console.log(document.location)
+        console.log('#location.href', document.location.href)
+        console.log('#location.search', document.location.search)
+        console.log(CanvasEx.id); //afficher l'id de canvas1
+        console.log(CanvasEx.name); //afficher le nom de canvas
+        console.log(CanvasEx.width); //afficher la largeur de canvas1 dans la console
+        console.log(CanvasEx.height); //afficher la longueur de canvas1 dans la console
+        var hauteur = (CanvasEx.height); //stocker la height dans une variable 
+        var largeur = (CanvasEx.width); //stocker la width dans une variable
+        //Récupérer l'objet canvas par son ID
+        var canvas = document.getElementById("CanvasEx");
+        //Créer un objet de dessin sur le canvas
+        var ctx = canvas.getContext("2d");
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "#FF0000";
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(0, 0, largeur / 2, hauteur / 2); //coordonnée du rectangle rouge
+
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "#00FF00";
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur / 2, hauteur / 2, largeur / 2, hauteur / 2); //coordonnée du rectangle vert
+    </script>
+
+    <hr style="color: black;border: solid">
+    <h2>Canvas 3 teste d'ajout de couleur</h2>
+    <canvas id="Canvas2" width="300" height="200" style="border:1px solid #000000;border-radius:50%; display: block;"></canvas>
+    <script>
+        //Récupérer l'objet canvas par son ID
+        var canvas = document.getElementById("Canvas2");
+        console.log(canvas);
+
+        //Créer un objet de dessin sur le canvas
+        var ctx = canvas.getContext("2d");
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "#0000FF";
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas (gauche,haut,droite,bas)
+        ctx.fillRect(0, 0, 150, 100);
+
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "#00FF00";
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas (gauche,haut,droite,bas)
+        ctx.fillRect(0, 100, 150, 100);
+
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "#FF0000";
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas (gauche,haut,droite,bas)
+        ctx.fillRect(150, 100, 150, 100);
+
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "#FF00FF";
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(150, 0, 200, 100);
+    </script>
+    <hr style="color: black;border: solid">
+    <h2>canvas 4 teste de changement de forme plus ajout de couleur</h2>
+    <canvas id="Canvas3" width="300" height="200" style="border:1px solid #000000; width: 150px;
+      height: 100px;transform: skew(20deg);background: red;display: block;"></canvas>
+    <script>
+        //Récupérer l'objet canvas par son ID
+        var canvas = document.getElementById("Canvas3");
+        console.log(canvas);
+
+        //Créer un objet de dessin sur le canvas
+        var ctx = canvas.getContext("2d");
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "#0000FF";
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas (gauche,haut,droite,bas)
+        ctx.fillRect(0, 0, 150, 100);
+
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "#00FF00";
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas (gauche,haut,droite,bas)
+        ctx.fillRect(0, 100, 150, 100);
+
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "#FF0000";
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas (gauche,haut,droite,bas)
+        ctx.fillRect(150, 100, 150, 100);
+
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "#FF00FF";
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(150, 0, 200, 100);
+    </script>
+    <hr style="color: black;border: solid">
+    <h2>Canvas 5 8zones et dégradés</h2>
+    <canvas id="Canvas5" width="300" height="200" style="border:1px solid #000000;display: block;"></canvas>
+    <script>
+        /*console.log('test'); //afficher le mot test dans la console 
+        console.log(document.location)
+        console.log('#location.href', document.location.href)
+        console.log('#location.search', document.location.search)
+        console.log(Canvas5.id); //afficher l'id de canvas1)
+        console.log(Canvas5.name); //afficher le nom de canvas1)
+        console.log(Canvas5.width); //afficher la largeur de canvas1 dans la console)
+        console.log(Canvas5.height); //afficher la longueur de canvas1 dans la console)*/
+        var hauteur = (Canvas5.height); //stocker la height dans une variable 
+        var largeur = (Canvas5.width); //stocker la width dans une variable
+        var h = 1 / 8; //création d'une variable pour définir l'oppacité de la couleur 
+        hauteur = hauteur / 2; //variable pour la hauteur des 8 rectangle 
+        largeur = largeur / 4; //variable pour la largeur des 8 rectazngles 
+
+
+        //Récupérer l'objet canvas par son ID
+        var canvas = document.getElementById("Canvas5");
+
+        //Créer un objet de dessin sur le canvas
+        var ctx = canvas.getContext("2d");
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(0, 0, largeur, hauteur);
+
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur, 0, largeur, hauteur);
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur * 2, 0, largeur, hauteur);
+
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur * 3, 0, largeur, hauteur);
+
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur * 3, hauteur, largeur, hauteur);
+
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur * 2, hauteur, largeur, hauteur);
+
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur, hauteur, largeur, hauteur);
+
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(0, hauteur, largeur, hauteur);
+    </script>
+    <hr style="color: black;border: solid">
+    <h2>Canvas 6 8zones et couleur aléatoire</h2>
+    <canvas id="Canvas6" width="300" height="200" style="border:1px solid #000000;display: block;"></canvas>
+    <script>
+        console.log('test'); //afficher le mot test dans la console 
+        console.log(document.location)
+        console.log('#location.href', document.location.href)
+        console.log('#location.search', document.location.search)
+        console.log(Canvas6.id); //afficher l'id de canvas1)
+        console.log(Canvas6.name); //afficher le nom de canvas1)
+        console.log(Canvas6.width); //afficher la largeur de canvas1 dans la console)
+        console.log(Canvas6.height); //afficher la longueur de canvas1 dans la console)
+        var hauteur = (Canvas6.height); //stocker la height dans une variable 
+        var largeur = (Canvas6.width); //stocker la width dans une variable 
+        hauteur = hauteur / 2 //variable pour la hauteur des 8 rectangle 
+        largeur = largeur / 4 //variable pour la largeur des 8 rectazngles
+
+        function color() { //permet de définir une couleur aléatoire dans un canvas diviser par 8 
+            var r = Math.round(Math.random() * 256); //définir un nb aléatoire entre 0 et 255
+            var g = Math.round(Math.random() * 256); //définir un nb aléatoire entre 0 et 255
+            var b = Math.round(Math.random() * 256); //définir un nb aléatoire entre 0 et 255
+            console.log(r); //permet de voir la valeur de la variable dans la console
+            console.log(g); //permet de voir la valeur de la variable dans la console 
+            console.log(b); //permet de voir la valeur de la variable dans la console
+            return "rgb(" + r + "," + g + "," + b + ")";
+        }
+
+
+        //Récupérer l'objet canvas par son ID
+        var canvas = document.getElementById("Canvas6");
+        //Créer un objet de dessin sur le canvas
+        var ctx = canvas.getContext("2d");
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        //ctx.fillStyle ="rgb("+r+","+g+","+b+")"; //definir la couleur 
+        //console.log("rgb("+r+","+g+","+b+")");
+        ctx.fillStyle = color(); //definir la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(0, 0, largeur, hauteur);
+
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = color(); //definir la couleur; 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur, 0, largeur, hauteur);
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = color(); //definir la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur * 2, 0, largeur, hauteur);
+
+        ctx.fillStyle = color(); //definir la couleur
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur * 3, 0, largeur, hauteur);
+
+        ctx.fillStyle = color(); //definir la couleur
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur * 3, hauteur, largeur, hauteur);
+
+        ctx.fillStyle = color(); //definir la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur * 2, hauteur, largeur, hauteur);
+
+        ctx.fillStyle = color(); //definir la couleur
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur, hauteur, largeur, hauteur);
+
+        ctx.fillStyle = color(); //definir la couleur
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(0, hauteur, largeur, hauteur);
+    </script>
+    <hr style="color: black;border: solid">
+    <h2>Canvas7 fractionner avec des diagonale </h2>
+    <canvas id="Canvas7" style="border:1px solid #000000;display: block;"></canvas>
+    <script>
+        Canvas7.width = 300;
+        Canvas7.height = 200;
+        console.log('test');
+        console.log(document.location)
+        console.log('#location.href', document.location.href)
+        console.log('#location.search', document.location.search)
+        console.log(Canvas7.id); //afficher l'id de canvas1
+        console.log(Canvas7.name); //afficher le nom de canvas
+        console.log(Canvas7.width); //afficher la largeur de canvas1 dans la console
+        console.log(Canvas7.height); //afficher la longueur de canvas1 dans la console
+
+        var hauteur = (Canvas7.height); //stocker la height dans une variable 
+        var largeur = (Canvas7.width); //stocker la width dans une variable
+        //Récupérer l'objet canvas par son ID
+        var canvas = document.getElementById("Canvas7");
+        //Créer un objet de dessin sur le canvas
+        var ctx = canvas.getContext("2d");
+        ctx.moveTo(0, 0); //se potison aux coord indiqués donc prmeier point de la dorite 
+        ctx.lineTo(300, 200); //se positione au dernier point de la droite
+        ctx.stroke(); //dessine la droite 
+
+        ctx.moveTo(0, 100); //se potison aux coord indiqués donc prmeier point de la droite 
+        ctx.lineTo(300, 100); //se positione au dernier point de la droite
+        ctx.stroke(); //dessine la droite
+
+        ctx.moveTo(150, 0); //se potison aux coord indiqués donc prmeier point de la droite 
+        ctx.lineTo(150, 200); //se positione au dernier point de la droite
+        ctx.stroke(); //dessine la droite
+
+        ctx.moveTo(0, 200); //se potison aux coord indiqués donc prmeier point de la droite 
+        ctx.lineTo(300, 0); //se positione au dernier point de la droite
+        ctx.stroke(); //dessine la droite
+    </script>
+    <hr style="color: black;border: solid">
+    <h2>Canvas8 fractionner avec des diagonale et de la couleur sur les traits et modification de l'épaisseur des traits </h2>
+    <canvas id="Canvas8" style="border:1px solid #000000;display: block;"></canvas>
+    <script>
+        Canvas8.width = 300;
+        Canvas8.height = 200;
+        console.log('test');
+        console.log(document.location)
+        console.log('#location.href', document.location.href)
+        console.log('#location.search', document.location.search)
+        console.log(Canvas8.id); //afficher l'id de canvas1
+        console.log(Canvas8.name); //afficher le nom de canvas
+        console.log(Canvas8.width); //afficher la largeur de canvas1 dans la console
+        console.log(Canvas8.height); //afficher la longueur de canvas1 dans la console
+
+        var hauteur = (Canvas8.height); //stocker la height dans une variable 
+        var largeur = (Canvas8.width); //stocker la width dans une variable
+        //Récupérer l'objet canvas par son ID
+        var canvas = document.getElementById("Canvas8");
+        //Créer un objet de dessin sur le canvas
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath(); //permet de démaré le trait
+        ctx.moveTo(0, 0); //se potison aux coord indiqués donc prmeier point de la dorite 
+        ctx.lineTo(300, 200); //se positione au dernier point de la droite
+        ctx.strokeStyle = "#FF00FF";
+        ctx.lineWidth = 10;
+        ctx.stroke(); //dessine la droite
+
+        ctx.beginPath();
+        ctx.moveTo(0, 100); //se potison aux coord indiqués donc prmeier point de la droite 
+        ctx.lineTo(300, 100); //se positione au dernier point de la droite
+        ctx.strokeStyle = "#00FF00";
+        ctx.lineWidth = 5;
+        ctx.stroke(); //dessine la droite
+
+        ctx.beginPath();
+        ctx.moveTo(150, 0); //se potison aux coord indiqués donc prmeier point de la droite 
+        ctx.lineTo(150, 200); //se positione au dernier point de la droite
+        ctx.strokeStyle = "#0000FF";
+        ctx.lineWidth = 6;
+        ctx.stroke(); //dessine la droite
+
+        ctx.beginPath();
+        ctx.moveTo(0, 200); //se potison aux coord indiqués donc premier point de la droite en gros
+        ctx.lineTo(300, 0); //se positione au dernier point de la droite
+        ctx.strokeStyle = "#FF0000";
+        ctx.lineWidth = 8;
+        ctx.stroke(); //dessine la droite
+    </script>
+    <hr style="color: black;border: solid">
+    <h2>Canvas Cercles</h2>
+    <canvas id="Canvascercle" width="300" height="200" style="border: solid 1px black; border-color: aqua"></canvas>
+    <script type="text/javascript">
+        var canvascercle = document.getElementById("Canvascercle");
+        var ctx = canvascercle.getContext("2d");
+        var hauteur = canvascercle.height;
+        var largeur = canvascercle.width;
+
+
+        ctx.arc(largeur / 2, hauteur / 2, 50, 0, 2 * Math.PI); //Permet de faire des arc de cercle 
+        ctx.fillStyle = '#000050'; //permet de définir la couleur
+        ctx.fill(); //permet de remplir la forme dessiné 
+        ctx.strokeStyle = '#FF0000'; //permet de definir le style de la forme dessiné
+        ctx.lineWidth = 5; //définis l'épaisser su trait de la forme
+        ctx.stroke(); //permet de dessiner 
+
+        ctx.beginPath(); //défins le premier point du tracée 
+        ctx.arc(largeur / 2, hauteur / 2, 75, 0, 2 * Math.PI);
+        ctx.strokeStyle = '#FFFF00';
+        ctx.lineWidth = 5;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(largeur / 2, hauteur / 2, 100, 0, 2 * Math.PI);
+        ctx.strokeStyle = '#00FF00';
+        ctx.lineWidth = 5;
+        ctx.stroke();
+    </script>
+
+    <hr style="color: black;border: solid">
+    <h2>Gradient linéaire</h2>
+    <canvas id="Canvas9" width="300" height="200" style="border: solid 1px black;"></canvas>
+    <script type="text/javascript">
+        var canvas9 = document.getElementById("Canvas9");
+        var ctx = canvas9.getContext("2d");
+
+        var grd = ctx.createLinearGradient(0, 0, 200, 0); //permet de définir le style les couleur du gradient 
+        grd.addColorStop(0, "red");
+        grd.addColorStop(0.5, "green");
+        grd.addColorStop(1, "yellow");
+
+
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, 300, 200);
+    </script>
+    <hr style="color: black;border: solid">
+    <h2>Gradient circulaire</h2>
+    <canvas id="Canvas10" width="300" height="200" style="border: solid 1px black;"></canvas>
+    <script type="text/javascript">
+        var canvas10 = document.getElementById("Canvas10");
+        var ctx = canvas10.getContext("2d");
+        var gradient = ctx.createRadialGradient(120, 170, 30, 100, 200, 80); //permet de définir le style les couleur du gradient 
+        gradient.addColorStop(0, "red");
+        gradient.addColorStop(1, "blue");
+
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 300, 200);
+    </script>
+
+
+
+    <hr>
+    <a href="./index.html">lien vers l'accueil</a>
+    <hr>
+    <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+    <hr>
+</body></html>
