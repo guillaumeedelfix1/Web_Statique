@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>Modele</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <link rel="stylesheet" type="text/css">
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="../images/caramini.png" />
+    <style type="text/css"></style>
+
+</head>
+
+
+<body>
+    <!--corp de la page: contient les éléments affichés-->
+
+    <hr color="">
+    <header id="haut"><img src="../images/logomini.png"></header>
+    <hr color="">
+    <br>
+
+    <hr style="color: black;border: solid">
+    <h2>Canvas Bateau</h2>
+    <hr style="color: black;border: solid">
+    <main>
+        <canvas id="petitbateau" width="400" height="400" style="border: solid 1px black;"></canvas>
+        <script type="text/javascript">
+            var petitbateau = document.getElementById("petitbateau");
+
+            var mer = petitbateau.getContext("2d");
+
+            // dessiner la voile du bateau
+            mer.beginPath();
+            mer.moveTo(150, 80);
+            mer.lineTo(300, 230);
+            mer.lineTo(150, 230);
+            mer.fillStyle = '#ADD8E6';
+            mer.fill();
+            mer.strokeStyle = "#ADD8E6";
+            mer.stroke();
+
+            // dessiner la coque du bateau
+            mer.beginPath();
+            mer.strokeStyle = "#882d17";
+            mer.lineWidth = 4;
+            mer.moveTo(50, 250);
+            mer.lineTo(100, 300);
+            mer.lineTo(250, 300);
+            mer.lineTo(300, 250);
+            mer.fillStyle = '#cd853f';
+            mer.fill();
+            mer.stroke();
+
+            // dessiner le mat du bateau
+            mer.beginPath();
+            mer.strokeStyle = "#882d17";
+            mer.lineWidth = 10;
+            mer.moveTo(140, 55);
+            mer.lineTo(140, 250);
+            mer.stroke();
+        </script>
+    </main>
+    
+    <hr style="color: black;border: solid">
+    <li><a href="canvas_avec_style.html"><span>Retour au menu</span></a></li>
+    <hr style="color: black;border: solid">
+
+
+
+    <hr>
+    <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+    <hr>
+</body></html>
