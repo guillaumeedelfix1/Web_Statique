@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>Modele</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <link rel="stylesheet" type="text/css">
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="../images/caramini.png" />
+    <style type="text/css"></style>
+
+</head>
+
+
+<body>
+    <!--corp de la page: contient les éléments affichés-->
+
+    <hr color="">
+    <header id="haut"><img src="../images/logomini.png"></header>
+    <hr color="">
+    <br>
+
+    <p>L'image</p><BR /><BR />
+    <img id=fond width="20%" height="20%" src="../images/1064455.png"  alt="Marché flottant à Strasbourg" style="transform: rotate(90deg);">
+
+    <p>Le canvas</p>
+    <BR /><BR />
+    <canvas id="CanvasimageRot" width="300" height="200" style="border:1px solid #000000; transform: rotate(90deg);"></canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById("CanvasimageRot");
+        var ctx = canvas.getContext("2d");
+        var img = document.getElementById("fond");
+        img.onload = function() {
+            img.width = canvas.width / 2;
+            img.height = canvas.height / 2;
+            ctx.drawImage(img, (canvas.width - img.width) / 2, (canvas.height - img.height) / 2, img.width, img.height);
+        }
+    </script>
+    
+    <hr style="color: black;border: solid">
+    <li><a href="canvas_avec_style.html"><span>Retour au menu</span></a></li>
+    <hr style="color: black;border: solid">
+
+
+
+    <hr>
+    <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+    <hr>
+</body></html>

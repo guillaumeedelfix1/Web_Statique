@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>Modele</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <link rel="stylesheet" type="text/css">
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="../images/caramini.png" />
+    <style type="text/css"></style>
+
+</head>
+
+
+<body>
+    <!--corp de la page: contient les éléments affichés-->
+
+    <hr color="">
+    <header id="haut"><img src="../images/logomini.png"></header>
+    <hr color="">
+
+    <hr style="color: black;border: solid">
+    <h2>Canvas texte </h2>
+    <hr style="color: black;border: solid">
+    <canvas id="CanvasTxt" width="300" height="200" style="border:1px solid #000000;display: block;"></canvas>
+    <script>
+        CanvasTxt.getAttribute("name");
+        console.log('test'); //afficher le mot test dans la console 
+        console.log(document.location);
+        console.log('#location.href', document.location.href);
+        console.log('#location.search', document.location.search);
+        console.log(CanvasTxt.id); //afficher l'id de canvas1)
+        console.log(CanvasTxt.name); //afficher le nom de canvas1)
+        console.log(CanvasTxt.width); //afficher la largeur de canvas1 dans la console)
+        console.log(CanvasTxt.height); //afficher la longueur de canvas1 dans la console)
+        var hauteur = CanvasTxt.height; //stocker la height dans une variable 
+        var largeur = CanvasTxt.width; //stocker la width dans une variable
+        //Récupérer l'objet canvas par son ID
+        var canvas = document.getElementById("CanvasTxt");
+        //Créer un objet de dessin sur le canvas
+        var ctx = canvas.getContext("2d");
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.font='40px serif';
+        ctx.fillText('Bonjour',150,100);
+    </script>
+    <hr style="color: black;border: solid">
+    <canvas id="CanvasTxt2" width="300" height="200" style="border:1px solid #000000;display: block;"></canvas>
+    <script>
+        CanvasTxt2.getAttribute("name");
+        console.log('test'); //afficher le mot test dans la console 
+        console.log(document.location);
+        console.log('#location.href', document.location.href);
+        console.log('#location.search', document.location.search);
+        console.log(CanvasTxt2.id); //afficher l'id de canvas1)
+        console.log(CanvasTxt2.name); //afficher le nom de canvas1)
+        console.log(CanvasTxt2.width); //afficher la largeur de canvas1 dans la console)
+        console.log(CanvasTxt2.height); //afficher la longueur de canvas1 dans la console)
+        var hauteur = CanvasTxt2.height; //stocker la height dans une variable 
+        var largeur = CanvasTxt2.width; //stocker la width dans une variable
+        //Récupérer l'objet canvas par son ID
+        var canvas = document.getElementById("CanvasTxt2");
+        //Créer un objet de dessin sur le canvas
+        var ctx = canvas.getContext("2d");
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.font='40px serif';
+        ctx.strokeText('Bonjour',100,50)
+    </script>
+    <hr style="color: black;border: solid">
+    <canvas id="CanvasTxt3" width="300" height="200" style="border:1px solid #000000;display: block;"></canvas>
+    <script>
+        CanvasTxt3.getAttribute("name");
+        console.log('test'); //afficher le mot test dans la console 
+        console.log(document.location);
+        console.log('#location.href', document.location.href);
+        console.log('#location.search', document.location.search);
+        console.log(CanvasTxt3.id); //afficher l'id de canvas1)
+        console.log(CanvasTxt3.name); //afficher le nom de canvas1)
+        console.log(CanvasTxt3.width); //afficher la largeur de canvas1 dans la console)
+        console.log(CanvasTxt3.height); //afficher la longueur de canvas1 dans la console)
+        var hauteur = CanvasTxt3.height; //stocker la height dans une variable 
+        var largeur = CanvasTxt3.width; //stocker la width dans une variable
+        //Récupérer l'objet canvas par son ID
+        var canvas = document.getElementById("CanvasTxt3");
+        //Créer un objet de dessin sur le canvas
+        var ctx = canvas.getContext("2d");
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.font='40px serif';
+        ctx.fillStyle='blue';
+        ctx.fillText('Bonjour',100,50);
+    </script>
+    <hr style="color: black;border: solid">
+    
+    <hr style="color: black;border: solid">
+    <li><a href="canvas_avec_style.html"><span>Retour au menu</span></a></li>
+    <hr style="color: black;border: solid">
+  
+    
+
+
+
+
+    <hr>
+    <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+    <hr>
+</body></html>

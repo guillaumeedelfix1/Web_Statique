@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+<!--Balise paires/ Impaires-->
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>Canvas avec menu onglet</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <link rel="stylesheet" type="text/css">
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="../images/caramini.jpg" />
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font: 100%, sans-serif;
+            color: #000;
+            background: #fff
+        }
+
+        #en-tete {
+            overflow: hidden;
+            background: #dae0d2 url(../images/fond.png) bottom repeat-x
+        }
+
+        #en-tete ul {
+            float: right;
+            margin: 16px 16px 0 0;
+            padding: 0;
+            list-style: none
+        }
+
+        #en-tete li {
+            float: left;
+            margin-left: 3px
+        }
+
+        #en-tete a,
+        #actif {
+            float: left;
+            letter-spacing: 1px;
+            padding-left: 10px;
+            background: url(../images/coin-gauche.png) 0% -250px no-repeat
+        }
+
+        #en-tete span,
+        #actif span {
+            float: left;
+            padding: 6px 10px 3px 0;
+            background: url(../images/coin-droit.png) 100% -250px no-repeat;
+            color: #fff
+        }
+
+        #actif span {
+            background-position: 100% 0;
+            color: #333
+        }
+
+        #en-tete a:hover,
+        #en-tete a:focus {
+            background-position: 0 -500px
+        }
+
+        #en-tete a:hover span,
+        #en-tete a:focus span {
+            background-position: 100% -500px
+        }
+
+        #en-tete {
+            height: 1%
+        }
+
+        #en-tete ul {
+            position: relative;
+            right: -16px
+        }
+
+        a:hover {
+            cursor: pointer
+        }
+
+        #en-tete a:active {
+            background-position: 0 -500px
+        }
+
+        #en-tete a:active span {
+            background-position: 100% -500px
+        }
+    </style>
+
+
+</head>
+
+<!--corp de la page: contient les éléments affichés-->
+<hr>
+<hr color="">
+<header id="haut"><img src="../images/logomini.png"></header>
+<hr color="">
+<hr>
+<!--permet de decouper une image pour dire que telle zone de l'image fais telle chose-->
+
+<body>
+    <div id="en-tete">
+        <ul>
+            <li><a href="canvas_div+flex.html"><span>canvas avec balise div et display flex</span></a></li>
+            <li><a href="Canvas_methode_1.html"><span>canvas dessin simple +canvas mini</span></a></li>
+            <li><a href="Canvas_methode_2.html"><span>Canvas changement de forme + ajout de couleurs supplémentaire</span></a></li>
+            <li><a href="Canvas_methode_3.html"><span>Canvas découper en 8 zones et création d'un dégradé de couleur</span></a></li>
+            <li><a href="Canvas_methode_4.html"><span>Canvas divisé en 8 et couleur aléatoire via une function color</span></a></li>
+            <li><a href="Canvas_methode_5.html"><span>Canvas fractionner via des diagonale</span></a></li>
+            <li><a href="Canvas_methode_6.html"><span>Canvas fractionner avec en diagonales avec modificaiton de l'épaisseur du trait et ajout de couleur</span></a></li>
+            <li><a href="Canvas_methode_7.html"><span>Canvas dessin de cercle via ctx.arc et remplissage via ctx.fill</span></a></li>
+            <li><a href="Canvas_methode_8.html"><span>Canvas réaliser avec la méthode du gradient linéaire</span></a></li>
+            <li><a href="Canvas_methode_9.html"><span>Canvas avec méthode Gradient circulaire</span></a></li>
+            <li><a href="Canvas_methode_10.html"><span>Canvas avec une image charger dynamiquement</span></a></li>
+            <li><a href="Canvas_methode_11.html"><span>Canvas avec Texte </span></a></li>
+            <li><a href="Canvas_methode_12.html"><span>Canvas rotation image 90 degrés</span></a></li>
+        </ul>
+    </div>
+</body>
+
+
+
+
+
+<hr>
+<footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+<hr></html>

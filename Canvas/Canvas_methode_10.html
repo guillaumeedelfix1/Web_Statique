@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>Modele</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <link rel="stylesheet" type="text/css">
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="../images/caramini.png" />
+    <style type="text/css"></style>
+
+</head>
+
+
+<body>
+    <!--corp de la page: contient les éléments affichés-->
+    <hr color="">
+    <header id="haut"><img src="../images/logomini.png"></header>
+    <hr color="">
+    <br>
+    <hr style="color: black;border: solid">
+    <h2>Canvas avec une image charger dynamiquement</h2>
+    <hr style="color: black;border: solid">
+        <canvas id="canvasimage" width="300" height="200" style="border: solid 1px black;"></canvas>
+        <script type="text/javascript">
+            window.onload = function() 
+            //function draw()
+            {
+                var canvasimage = document.getElementById("canvasimage");
+                var ctx = canvasimage.getContext("2d");
+                //je crée l'objet de type image
+                var objImg = new Image();
+                objImg.src="../images/graphique.png";
+                objImg.width=canvasimage.width/2;
+                objImg.height=canvasimage.height/2;
+                ctx.drawImage(objImg,(canvasimage.width-objImg.width)/2, (canvasimage.height-objImg.height)/2,objImg.width, objImg.height);
+                objImg.onload = function()
+                {
+
+                    ctx.drawImage(objImg,0,0);
+                    ctx.moveTo(30,96);
+                    ctx.lineTo(70,66);
+                    ctx.lineTo(103,76);
+                    ctx.lineTo(170,15);
+                    ctx.stroke();
+                    ctx.fillText("dessiner un graphique",70,170);
+                    
+                };
+                
+            }
+        </script>
+    
+    <hr style="color: black;border: solid">
+    <li><a href="canvas_avec_style.html"><span>Retour au menu</span></a></li>
+    <hr style="color: black;border: solid">
+
+
+
+
+    <hr>
+    <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+    <hr>
+</body></html>

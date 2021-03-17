@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>Modele</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <link rel="stylesheet" type="text/css">
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="../images/caramini.png" />
+    <style type="text/css"></style>
+
+</head>
+
+
+<body>
+    <hr color="">
+    <header id="haut"><img src="../images/logomini.png"></header>
+    <hr color="">
+    <br>
+    
+    <hr style="color: black;border: solid">
+    <h2>Canvas fractionner via des diagonale </h2>
+    <hr style="color: black;border: solid">
+    <canvas id="Canvas7" style="border:1px solid #000000;display: block;"></canvas>
+    <script>
+        Canvas7.width = 300;
+        Canvas7.height = 200;
+        console.log('test');
+        console.log(document.location)
+        console.log('#location.href', document.location.href)
+        console.log('#location.search', document.location.search)
+        console.log(Canvas7.id); //afficher l'id de canvas1
+        console.log(Canvas7.name); //afficher le nom de canvas
+        console.log(Canvas7.width); //afficher la largeur de canvas1 dans la console
+        console.log(Canvas7.height); //afficher la longueur de canvas1 dans la console
+
+        var hauteur = (Canvas7.height); //stocker la height dans une variable 
+        var largeur = (Canvas7.width); //stocker la width dans une variable
+        //Récupérer l'objet canvas par son ID
+        var canvas = document.getElementById("Canvas7");
+        //Créer un objet de dessin sur le canvas
+        var ctx = canvas.getContext("2d");
+        ctx.moveTo(0, 0); //se potison aux coord indiqués donc prmeier point de la dorite 
+        ctx.lineTo(300, 200); //se positione au dernier point de la droite
+        ctx.stroke(); //dessine la droite 
+
+        ctx.moveTo(0, 100); //se potison aux coord indiqués donc prmeier point de la droite 
+        ctx.lineTo(300, 100); //se positione au dernier point de la droite
+        ctx.stroke(); //dessine la droite
+
+        ctx.moveTo(150, 0); //se potison aux coord indiqués donc prmeier point de la droite 
+        ctx.lineTo(150, 200); //se positione au dernier point de la droite
+        ctx.stroke(); //dessine la droite
+
+        ctx.moveTo(0, 200); //se potison aux coord indiqués donc prmeier point de la droite 
+        ctx.lineTo(300, 0); //se positione au dernier point de la droite
+        ctx.stroke(); //dessine la droite
+    </script>
+    
+    <hr style="color: black;border: solid">
+    <li><a href="canvas_avec_style.html"><span>Retour au menu</span></a></li>
+    <hr style="color: black;border: solid">
+    
+    <hr>
+    <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+    <hr>
+</body></html>

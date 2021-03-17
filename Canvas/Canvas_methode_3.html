@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>Modele</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <link rel="stylesheet" type="text/css">
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="../images/caramini.png" />
+    <style type="text/css"></style>
+
+</head>
+
+
+<body>
+    <!--corp de la page: contient les éléments affichés-->
+
+    <hr color="">
+    <header id="haut"><img src="../images/logomini.png"></header>
+    <hr color="">
+    
+    <hr style="color: black;border: solid">
+    <h2>Canvas découper en 8 zones et création d'un dégradé de couleur </h2>
+    <hr style="color: black;border: solid">
+    <canvas id="Canvas5" width="300" height="200" style="border:1px solid #000000;display: block;"></canvas>
+    <script>
+        /*console.log('test'); //afficher le mot test dans la console 
+        console.log(document.location)
+        console.log('#location.href', document.location.href)
+        console.log('#location.search', document.location.search)
+        console.log(Canvas5.id); //afficher l'id de canvas1)
+        console.log(Canvas5.name); //afficher le nom de canvas1)
+        console.log(Canvas5.width); //afficher la largeur de canvas1 dans la console)
+        console.log(Canvas5.height); //afficher la longueur de canvas1 dans la console)*/
+        var hauteur = (Canvas5.height); //stocker la height dans une variable 
+        var largeur = (Canvas5.width); //stocker la width dans une variable
+        var h = 1 / 8; //création d'une variable pour définir l'oppacité de la couleur 
+        hauteur = hauteur / 2; //variable pour la hauteur des 8 rectangle 
+        largeur = largeur / 4; //variable pour la largeur des 8 rectazngles 
+
+
+        //Récupérer l'objet canvas par son ID
+        var canvas = document.getElementById("Canvas5");
+
+        //Créer un objet de dessin sur le canvas
+        var ctx = canvas.getContext("2d");
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(0, 0, largeur, hauteur);
+
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur, 0, largeur, hauteur);
+        //Dessiner : affecter un style à l'objet dessin : le style par défaut est noir
+
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur * 2, 0, largeur, hauteur);
+
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur * 3, 0, largeur, hauteur);
+
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur * 3, hauteur, largeur, hauteur);
+
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur * 2, hauteur, largeur, hauteur);
+
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(largeur, hauteur, largeur, hauteur);
+
+        h = 0.125 + h //augmentation de l'oppacité de la couleur
+        ctx.fillStyle = "rgba(255,0,0," + h + ")"; //definir la couleur et l'opacité de la couleur 
+        //On dessine un rectangle avec le fillstyle précédent sur le canvas
+        ctx.fillRect(0, hauteur, largeur, hauteur);
+    </script>
+    
+    <hr style="color: black;border: solid">
+    <li><a href="canvas_avec_style.html"><span>Retour au menu</span></a></li>
+    <hr style="color: black;border: solid">
+    
+
+
+
+
+    <hr>
+    <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+    <hr>
+</body></html>
