@@ -280,7 +280,7 @@ function mois() {
         document.getElementById("mois").value = ("Juillet");
         break;
 
-        case nombre == 8:
+        case chiffre == 8:
         document.getElementById("mois").value = ("Août");
         break;
 
