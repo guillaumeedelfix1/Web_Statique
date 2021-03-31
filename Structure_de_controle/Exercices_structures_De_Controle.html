@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+<!--Balise paires/ Impaires-->
+
+<html>
+
+<head>
+    <!--en tête de la pâge-->
+    <title>Exercice Strucutre de Contrôle Js</title>
+    <!--en tête de la page-->
+    <meta charset="utf-8">
+    <!--encodage de la page (gestion des caractères accentués)-->
+    <!--intégrer un fichier CSS externe-->
+    <!--<link rel="stylesheet" type="text/css" href="..css/monstyle.css">-->
+    <!--Afficher une image dans l'onglet de sa page-->
+    <link rel="icon" type="image/x-icon" href="../images/caramini.jpg" />
+    <style type="text/css"></style>
+    <script type="text/javascript" src="Js_Structure_de_Controle.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="style_Structure_de_Controle.css">
+
+
+</head>
+
+<body>
+    <!--corp de la page: contient les éléments affichés-->
+    <hr>
+    <header id="haut"><img src="../images/logomini.png"></header>
+    <hr>
+
+    <!--permet de decouper une image pour dire que telle zone de l'image fais telle chose-->
+    <section id="Exercice1">
+        <fieldset id="Box">
+            <legend>Somme Produit Moyenne et Max de 3 valeurs</legend>
+            <hr>
+            <label for="nb1">Valeur 1</label>
+            <input type="number" id="nb1" name="nb1">
+            <label for="nb2">Valeur 2</label>
+            <input type="number" id=nb2 name="nb1">
+            <label for="nb3">Valeur 3</label>
+            <input type="number" id="nb3" name="nb1">
+
+            <button onclick="Zomme()">Somme</button>
+            <button onclick="Prd()">Produit</button>
+            <button onclick="Moy()">Moyenne</button>
+            <button onclick="Max()">Valeurs max</button>
+
+            <hr>
+            <label for="sommefinal">Résultat somme</label>
+            <input type="text" id="somme" name="sommefinal">
+            <label for="PrdFinal">Résultat Produit</label>
+            <input type="text" id="produit" name="PrdFinal">
+            <label for="MoyenneFinal">Résultat Moyenne</label>
+            <input type="text" id="moyenne" name="MoyenneFinal">
+            <label for="sommefinal">Valeurs Max</label>
+            <input type="text" id="max" name="Max">
+            <hr>
+        </fieldset>
+    </section>
+
+    <section id="Exercice2">
+        <fieldset id="Box">
+            <legend>Exercice Sur le Calcule du prix TTC </legend>
+            <label for="prixht">Prix Hors Taxe</label>
+            <input type="number" id="prixht" name="prixht" value="0">
+            <label for="nbexp">Nombre d'exemplaire</label>
+            <input type="number" id="nbexp" name="nbexp" value="0">
+            <label for="tva">Taux de TVA</label>
+            <select type="text" value="" name="tva" size="4" multiple="" id="tva" onchange="TVA()">
+                <!--(le calcule du prix TTC se faait lors de la selection du taux de tva)-->
+                <option value="0.021">2.1%</option>
+                <option value="0.055">5.5%</option>
+                <option value="0.1">10%</option>
+                <option value="0.2">20%</option>
+            </select>
+            <hr>
+            <label for="prixttc">Prix TTC</label>
+            <input type="text" id="prixttc" name="ptixttc">
+            <hr>
+        </fieldset>
+    </section>
+
+    <section id="Exercice3">
+        <fieldset id="Box">
+            <legend>Exercie Conjugaison des verbe du prmeier groupe</legend>
+            <input type="text" id="verbe" name="verbe" size="11" placeholder="entrer votre verbe">
+            <button onclick="conjugaison()">cliquez pour valider</button>
+            <hr>
+            <textarea id="conjugfin" rows="5" cols="25" placeholder="voici votre verbe conjugez a la première personne du singulier"></textarea>
+        </fieldset>
+    </section>
+
+    <section id="Exercice4">
+        <fieldset id="Box">
+            <legend>Exercice Affiche les initiale </legend>
+            <label>Prénom</label>
+            <input type="text" id="prenom" name="prenom" size="11" placeholder="entrer votre prénom">
+            <label>Nom</label>
+            <input type="text" id="nom" name="nom" size="11" placeholder="entrer votre nom">
+            <hr>
+            <label>Initiale</label>
+            <input type="text" id="Initiale" name="Initiale" size="11">
+            <button onclick="initiale()">Afficher vos initiale</button>
+        </fieldset>
+    </section>
+
+    <section id="Exercice5">
+        <fieldset id="Box">
+            <legend>Exercice Verification palindrome </legend>
+            <label>Mot</label>
+            <input type="text" id="mot">
+            <button onclick="palindrome()">Vérification</button>
+            <hr>
+            <label>Palindrome</label>
+            <input type="text" id="palindrome" name="palindrome">
+        </fieldset>
+    </section>
+
+    <section id="Exercice6">
+        <fieldset id="Box">
+            <legend>Exercice Moyenne de nombre positif (pas réussi)</legend>
+            <label>Valeur 1</label>
+            <input type="number" id="nbr1" name="nb1">
+            <label>Valeur 2</label>
+            <input type="number" id="nbr2" name="nb2">
+            <label>Valeur 3</label>
+            <input type="number" id="nbr3" name="nb3">
+            <label>Valeur 4</label>
+            <input type="number" id="nbr4" name="nb4">
+            <button onclick="verifpositif()">Faire la moyenne</button>
+            <hr>
+            <label>Moyenne</label>
+            <input type="number" id="moy" name="moy">
+        </fieldset>
+    </section>
+
+    <section id="Exercice7">
+        <fieldset id="Box">
+            <legend>Exercice Sur les catégorie selon l'age </legend>
+            <label>Age</label>
+            <input type="text" id="age">
+            <label>Catégorie</label>
+            <input type="text" id="categorie">
+            <button onclick="enfant()">Verifier catégorie</button>
+        </fieldset>
+    </section>
+
+    <section id="Exercice8">
+        <fieldset id="Box">
+            <legend>Exercice verification chiffre entre 1 et 5 </legend>
+            <label>Chiffre</label>
+            <input type="text" id="chiffre">
+            <button onclick="chiffre()">Vérifier chiffre</button>
+        </fieldset>
+    </section>
+
+    <section id="Exercice9">
+        <fieldset id="Box">
+            <legend>Exercice Plus petit ou plus grand </legend>
+            <label>Saisir Un Nombre</label>
+            <input type="text" id="reponse">
+            <input type="text" id="indice">
+            <button onclick="Justeprix()">Vérifier chiffre</button>
+            <button id="abandon" onclick="abandon()">Abandon</button>
+        </fieldset>
+    </section>
+
+    <section id="Exercice10">
+        <fieldset id="Box">
+            <legend>Exercice Saisis d'un chiffre entre 1 et 12  pour obtenir le mois équivalent </legend>
+            <label>Saisir un chiffre pour obtenir le mois correspondant</label>
+            <input type="text" id="nbr">
+            <input type="text" id="mois">
+            <button onclick="mois()">Obtenir mois</button>
+        </fieldset>
+    </section>
+
+
+
+
+
+
+
+
+
+<hr>
+<a href="../index.html">lien vers l'accueil</a>
+<hr>    
+    
+    <section id="bas">
+        <hr>
+        <footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+        <hr>
+    </section>
+</body></html>

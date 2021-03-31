@@ -1,0 +1,83 @@
+hr {
+    border: solid 1px;
+    color: black
+}
+
+legend {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+}
+
+select {
+    display: block;
+}
+
+fieldset {
+    width: 50%;
+    border: solid 3px;
+    border-color: rgb(192, 57, 43);
+}
+
+#Exercice1 {
+    float: left;
+    width: 210px;
+}
+
+#Exercice2 {
+    float: left;
+    width: 210px;
+}
+
+#Exercice3 {
+    float: left;
+    width: 210px;
+}
+
+#Exercice4 {
+    float: left;
+    width: 210px;
+    margin-left: 25px;
+}
+
+#Exercice5 {
+    float: left;
+    width: 210px;
+    margin-left: -60px;
+}
+
+#Exercice6 {
+    float: left;
+    width: 210px;
+}
+
+#Exercice7 {
+    float: left;
+    width: 210px;
+    margin-top: 11px;
+}
+
+#Exercice8 {
+    float: left;
+    width: 210px;
+}
+
+#Exercice9 {
+    float: left;
+    width: 210px;
+    margin-top: 11px;
+}
+
+#Exercice10 {
+    float: left;
+    width: 210px;
+    margin-left: -1855px;
+    margin-top: 500px;
+}
+
+#bas {
+    margin-top: 800px;
+}
