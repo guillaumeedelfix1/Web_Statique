@@ -248,9 +248,9 @@ function abandon() {
 }
 
 function mois() {
-    chiffre = document.getElementById("nbr").value
+    chiffre = document.getElementById("nbr").value// récupération de la valeur saisis
 
-    switch (true) {
+    switch (true) {//selon la valeur de chiffre on dit ce quon fait grace au switch case 
 
         case chiffre == 1:
         document.getElementById("mois").value = ("Janvier");
