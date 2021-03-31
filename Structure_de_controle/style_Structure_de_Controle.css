@@ -78,6 +78,29 @@ fieldset {
     margin-top: 500px;
 }
 
+#Exercice11 {
+    float: left;
+    width: 210px;
+    margin-left: -1644px;
+    margin-top: 523px;
+}
+
+#Exercice12 {
+    float: left;
+    width: 210px;
+    margin-left: -1433px;
+    margin-top: 523px;
+}
+#Exercice13 {
+    float: left;
+    width: 210px;
+    margin-left: -1222px;
+    margin-top: 511px;
+}
+
+
+
+
 #bas {
     margin-top: 800px;
 }

@@ -175,8 +175,76 @@ Indique la version de HTML utilisé: HTML5
             <legend>Exercice Saisis d'un chiffre entre 1 et 12 pour obtenir le mois équivalent </legend>
             <label>Saisir un chiffre pour obtenir le mois correspondant</label>
             <input type="text" id="nbr">
-            <input type="text" id="mois">
             <button onclick="mois()">Obtenir mois</button>
+            <hr>
+            <input type="text" id="mois">
+
+        </fieldset>
+    </section>
+
+    <section id="Exercice11">
+        <fieldset id="Box">
+            <legend>Exercice De l'auberge</legend>
+            <label>Saisir votre age</label>
+            <input type="text" id="aged">
+            <label>Saisir le poids de vos bagage</label>
+            <input type="text" id="poids">
+            <button onclick="auberge()">Obtenir le prix total</button>
+            <hr>
+            <label>Prix de votre chambre</label>
+            <input type="text" id="montant">
+        </fieldset>
+    </section>
+
+    <section id="Exercice12">
+        <fieldset id="Box">
+            <legend>Exercice Horraire boulangerie</legend>
+            <label>Saisir l'heure de passage</label>
+            <input type="text" id="heure">
+            <select type="text" value="" name="jours" size="4" multiple="" id="jours">
+                <option value="0">Lundi</option>
+                <option value="1">Mardi</option>
+                <option value="2">Mercredi</option>
+                <option value="3">Jeudi</option>
+                <option value="4">Vendredi</option>
+                <option value="5">Samedi</option>
+                <option value="6">Dimanche </option>
+                <hr>
+            </select>
+            <button onclick="boulangerie()">Voir si la boulangerie est ouverte ou non</button>
+            <hr>
+            <label>La boulangerie est</label>
+            <input type="text" id="ouverture">
+        </fieldset>
+    </section>
+    
+    <section id="Exercice13">
+        <fieldset id="Box">
+            <legend>Exercice date du l'endemain</legend>
+            <label>Saisir le jours</label>
+            <input type="text" id="jour">
+            <label>Saisir le  mois</label>
+            <select type="text" value="" name="month" size="1" multiple="" id="month">
+                <option value="0">Janvier</option>
+                <option value="1">Février</option>
+                <option value="2">Mars</option>
+                <option value="3">Avril</option>
+                <option value="4">Mai</option>
+                <option value="5">Juin</option>
+                <option value="6">Juillet</option>
+                <option value="7">Août</option>
+                <option value="8">Septembre</option>
+                <option value="9">Octobre</option>
+                <option value="10">Novembre</option>
+                <option value="11">Décembre</option>
+                <hr>
+            </select>
+            <label>Saisir l'année</label>
+            <input type="text" id="annee">
+            <button onclick="demain()">afficher le jours suivant</button>
+            <hr>
+            <label>Demain nous serons</label>
+            <input type="text" id="jsuivant">
         </fieldset>
     </section>
 
